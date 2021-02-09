@@ -142,4 +142,26 @@ y=np.load('xx.npy')
 print(y)
 
 
+import numpy as np
+s1=np.random.rand(3,4,5)
+print(s1)
+
+
+s2=np.random.randn(3,4,5)
+print(s2)
+
+
+s3=np.random.randint(100,200,(3,4))
+print(s3)
+
+
+# 给定同一个随机数种子，可以再次生成相同的随机数数组，测试中很有用
+np.random.seed(10)
+s4=np.random.randint(100,200,(3,4))
+print(s4)
+np.random.seed(10)
+s5=np.random.randint(100,200,(3,4))
+print(s5)
+
+
 
