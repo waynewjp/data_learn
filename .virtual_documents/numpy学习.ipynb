@@ -164,4 +164,4 @@ s5=np.random.randint(100,200,(3,4))
 print(s5)
 
 
-np.
+np.randm
