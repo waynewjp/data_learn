@@ -2,6 +2,7 @@ a=np.array([[1,2,3,4],[11,22,33,44]])
 print(a)
 
 
+
 a.shape
 
 
@@ -161,4 +162,9 @@ s5=np.random.randint(100,200,(3,4))
 print(s5)
 
 
-np.
+import numpy as np
+x=np.arange(15).reshape(3,5)
+x
+
+
+
