@@ -167,4 +167,19 @@ x=np.arange(15).reshape(3,5)
 x
 
 
+np.sum(x)
+
+
+np.mean(x,axis=1)
+# 对x第二个维度，每行数据求一个平均值
+
+
+np.mean(x,axis=0)
+
+
+np.average(x,axis=0,weights=[10,5,1])
+# 第0维度，即最外侧3个元素，每个元素包括5个。对这3个元素求平均值
+# 注意用了权重【10，5，1】，即
+
+
 
