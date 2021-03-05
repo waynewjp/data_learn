@@ -3,13 +3,16 @@ from PIL import Image
 import numpy as np
 
 
-a=np.array(Image.open("/home/www/jupyter_lab/素材/图片1.png"))
+a=np.array(Image.open("/home/www/jupyter_lab/素材/图片1.jpg"))
 print(a.shape,a.dtype)
 
 
 b=[255,255,255]-a
 im=Image.fromarray(b.astype('uint8'))
 im.save('/home/www/jupyter_lab/素材/图片2.jpg')
+
+
+
 
 
 
