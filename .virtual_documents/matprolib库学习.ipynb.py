@@ -9,6 +9,11 @@ plt.savefig('/home/www/jupyter_lab/素材/test',dpi=600) #默认是png格式
 
 
 
+import matplotlib
+import matplotlib.pyplot as plt
+#设置字体为楷体
+matplotlib.rcParams['font.sans-serif']=['SimHei'] #显示中文标签
+matplotlib.rcParams['axes.unicode_minus']=False   #这两行需要手动设置
 #两个参数，一个x，一个y
 plt.plot([0,2,4,6,8],[3,1,4,5,2])
 plt.ylabel('成绩')
