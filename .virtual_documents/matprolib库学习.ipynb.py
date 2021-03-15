@@ -43,3 +43,21 @@ plt.plot(a,np.sin(a))
 plt.subplot(2,1,2)
 plt.plot(a,np.cos(a),'r--')
 plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+a=np.arange(0.0,5.0,0.02)
+plt.plot(a,np.cos(2*np.pi*a),'r--')
+
+
+
+plt.xlabel('横轴：时间',fontproperties='SimHei',fontsize=15,color='green')
+
+
+import matplotlib    
+print(matplotlib.matplotlib_fname())
+
+
+
