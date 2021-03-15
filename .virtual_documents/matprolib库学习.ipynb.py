@@ -53,7 +53,9 @@ plt.plot(a,np.cos(2*np.pi*a),'r--')
 
 
 
-plt.xlabel('横轴：时间',fontproperties='SimHei',fontsize=15,color='green')
+# plt.xlabel('横轴：时间',fontproperties='SimHei',fontsize=15,color='green')
+plt.rcParams['font.sans-serif']=['SimHei']
+plt.xlabel('横轴：时间')
 
 
 import matplotlib    
