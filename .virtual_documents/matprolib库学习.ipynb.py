@@ -50,16 +50,20 @@ import matplotlib.pyplot as plt
 
 a=np.arange(0.0,5.0,0.02)
 plt.plot(a,np.cos(2*np.pi*a),'r--')
+plt.xlabel('横轴：时间',fontproperties='SimHei',fontsize=15,color='green')
+plt.ylabel('纵轴：振幅',fontproperties='SimHei',fontsize=15)
+plt.title(r'郑泫渤')
+plt.show()
 
 
 
-# plt.xlabel('横轴：时间',fontproperties='SimHei',fontsize=15,color='green')
-plt.rcParams['font.sans-serif']=['SimHei']
-plt.xlabel('横轴：时间')
 
 
-import matplotlib    
-print(matplotlib.matplotlib_fname())
+
+
+
+
+
 
 
 

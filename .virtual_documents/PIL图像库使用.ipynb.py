@@ -22,3 +22,6 @@ print(a.shape,a.dtype)
 b=255-a
 im=Image.fromarray(b.astype('uint8'))
 im.save('/home/www/jupyter_lab/素材/图片3.jpg')
+
+
+
