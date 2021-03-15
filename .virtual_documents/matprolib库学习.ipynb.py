@@ -59,13 +59,24 @@ plt.show()
 import matplotlib.pyplot as plt
 labels='frog','dog','log','hog'
 size=[15,30,45,10] #比例
-explode=(0,0.1,0,0)
+explode=(0,0.1,0,0) #那一块要吐出来
 
 plt.pie(size,explode=explode,labels=labels,autopct='get_ipython().run_line_magic("1.1f%%',shadow=False,startangle=90)", "")
-plt.show
+plt.axis('equal') # 饼图变成正圆形
+plt.show()
 
 
+import matplotlib.pyplot as plt
+import numpy as np
 
+np.random.seed(0)
+mu,sigma=100,20 #均值、标准差
+a=np.random.normal(mu,sigma,size=100)
+
+plt.hist(a,40) # bin,直方的个数，越多越细
+plt.title('test gram')
+
+plt.show()
 
 
 
