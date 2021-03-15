@@ -43,6 +43,3 @@ plt.plot(a,np.sin(a))
 plt.subplot(2,1,2)
 plt.plot(a,np.cos(a),'r--')
 plt.show()
-
-
-
