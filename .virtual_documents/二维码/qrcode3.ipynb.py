@@ -28,6 +28,7 @@ def qr_code():
     )
     qr.add_data("2021信通岗位新进员工技能强化班")# 添加数据
     qr.make(fit=True)# 填充数据
+    
    # 生成图片
     img = qr.make_image(fill_color="green", back_color="white")
     img = img.convert("RGBA")
