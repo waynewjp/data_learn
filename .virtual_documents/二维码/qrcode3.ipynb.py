@@ -26,7 +26,7 @@ def qr_code():
         box_size=10,
         border=1
     )
-    qr.add_data("2021信通岗位新进员工技能强化班",optimize=5)# 添加数据
+    qr.add_data("2021信通岗位新进员工技能强化班\n2021信通岗位新进员工技能强化班")# 添加数据
     qr.make(fit=True)# 填充数据
     
    # 生成图片
