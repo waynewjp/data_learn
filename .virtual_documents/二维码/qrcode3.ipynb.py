@@ -42,9 +42,10 @@ def qr_code():
     '''
     # 黏贴logo照
     img.paste(icon, (w, h), icon)
-    img.save("培训绿码.png")
+    
     # img.show()# 自动打开图片
     # 终端显示图片
+    img.save(r"jupyter_lab/二维码/培训绿码.png")
     plt.imshow(img)
     plt.show()
 
