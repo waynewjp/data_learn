@@ -7,12 +7,21 @@ def qr_code_1():
     img = qrcode.make('hello,world')
     print(img)
     #保存
-    with open(r'test1.png', 'wb') as f:
+    with open(r'jupyter_lab/二维码/test1.png', 'wb') as f:
         img.save(f)
+
+
+
 
 
 if __name__ == '__main__':
     qr_code_1()
+
+
+
+
+
+
 
 
 
