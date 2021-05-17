@@ -30,13 +30,12 @@ def qr_code():
         box_size=10,
         border=1
     )
-    text1='{:<10s}'.format('2021信通岗位新进员工技能强化班\n\r')
-    text2='{:<10s}'.format('原定6月举办') 
+   
             #延期至7月"""
-    #qr.add_data('2021信通岗位新进员工技能强化班\t\n')# 添加数据
+    qr.add_data('2021信通岗位新进员工技能强化班,原定6月,延期至7月')# 添加数据
     #qr.add_data('{:<10d}'.format('2021信通岗位新进员工技能强化班\n\r'))
-    qr.add_data(text1)
-    qr.add_data(text2)
+    #qr.add_data(text1)
+    #qr.add_data(text2)
     qr.make(fit=True)# 填充数据
     
    # 生成图片
