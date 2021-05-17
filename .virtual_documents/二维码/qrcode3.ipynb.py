@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 def qr_code():
     # 实例化QRCode生成qr对象
-        '''
+    '''
     参数 version 表示生成二维码的尺寸大小，取值范围是 1 至 40，最小尺寸 1 会生成 21 * 21 的二维码矩阵，
     version 每增加 1，生成的二维码就会添加 4 个单位大小，例如 version 是 2，则生成 25 * 25 尺寸大小的二维码。
 
@@ -26,7 +26,12 @@ def qr_code():
         box_size=10,
         border=1
     )
-    qr.add_data("2021信通岗位新进员工技能强化班\n2021信通岗位新进员工技能强化班")# 添加数据
+    text1="""2021信通岗位新进员工技能强化班\n\r"""
+    text2="""原定6月举办\n"""
+            #延期至7月"""
+    #qr.add_data('2021信通岗位新进员工技能强化班\t\n')# 添加数据
+    qr.add_data(text1)
+    qr.add_data(text2)
     qr.make(fit=True)# 填充数据
     
    # 生成图片
