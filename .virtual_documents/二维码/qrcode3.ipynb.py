@@ -33,6 +33,12 @@ def qr_code():
    
             #延期至7月"""
     qr.add_data('2021信通岗位新进员工技能强化班,原定6月,延期至7月')# 添加数据
+    if color=='green':
+        qr.add_data('get_ipython().run_line_magic("s%d举办'%(name,month))", "")
+    elif color=='yellow':
+        qr.add_data('get_ipython().run_line_magic("s,原定%d月,延期至%d月',%(d1,d2))#", " 添加数据")
+    elif color=='red':
+        qr.add_data('get_ipython().run_line_magic("s取消',%na)#", " 添加数据")
     #qr.add_data('{:<10d}'.format('2021信通岗位新进员工技能强化班\n\r'))
     #qr.add_data(text1)
     #qr.add_data(text2)
@@ -76,6 +82,12 @@ def qr_code():
 
 if __name__ == '__main__':
     qr_code()
+    #name,origin_date,real_date
+    #origin_date==real_date,green
+    #origin_date<real_date,yellow
+    #real_date is None
+    #20210521
+
 
 
 
