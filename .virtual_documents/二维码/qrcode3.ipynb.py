@@ -89,9 +89,22 @@ def qr_code(name,origin_date,real_date):
     plt.imshow(img)
     plt.show()
 
+
 def read_date():
-    f=open('date.csv')
-    lines=f.
+    f=open("jupyter_lab/二维码/data.csv")
+    lines=f.readlines()
+    target=[]
+    for line in lines:
+        strs=line.strip().split(',')
+        record=dict()
+        record['name']=strs[0]
+        record['origin_date']=strs[1]
+        if len(strs)==3:
+            record['real_date']=strs[2]
+        else:
+            record['real_date']=None
+        target.append(record)
+    return target
 
 
 if __name__ == '__main__':
@@ -99,11 +112,18 @@ if __name__ == '__main__':
     name='2021信通岗位新进员工技能强化班'
     origin_date='20210606'
     real_date=None
-    qr_code(name,origin_date,real_date)
+    records=read_date()
+#         qr_code(record['name',origin_date,real_date)
+    for record in records:
+        print(record)
+        qr_code(record['name'],record['origin_date'],record['real_date'])
     #origin_date==real_date,green
     #origin_date<real_date,yellow
     #real_date is None
     #20210521
+
+
+
 
 
 
