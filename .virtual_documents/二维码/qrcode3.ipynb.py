@@ -9,7 +9,7 @@ text1="""2021信通岗位新进员工技能强化班\n\r原定6月举办\n"""
 print(text1)
 
 
-def qr_code():
+def qr_code(name,origin_date,real_date):
     # 实例化QRCode生成qr对象
     '''
     参数 version 表示生成二维码的尺寸大小，取值范围是 1 至 40，最小尺寸 1 会生成 21 * 21 的二维码矩阵，
@@ -31,21 +31,32 @@ def qr_code():
         border=1
     )
    
+    
             #延期至7月"""
-    qr.add_data('2021信通岗位新进员工技能强化班,原定6月,延期至7月')# 添加数据
+#     qr.add_data('2021信通岗位新进员工技能强化班,原定6月,延期至7月')# 添加数据
+    month1=int(origin_date[4:6])
+    if real_date is None:
+        color='red'
+    else:
+        month2=int(real_date[4:6])
+        if month1==month2:
+            color='green'
+        else:
+            color='yellow'
+
     if color=='green':
-        qr.add_data('get_ipython().run_line_magic("s%d举办'%(name,month))", "")
+        qr.add_data('get_ipython().run_line_magic("s%d举办'%(name,month1))", "")
     elif color=='yellow':
-        qr.add_data('get_ipython().run_line_magic("s,原定%d月,延期至%d月',%(d1,d2))#", " 添加数据")
+        qr.add_data('get_ipython().run_line_magic("s,原定%d月,延期至%d月'%(name,month1,month2))#", " 添加数据")
     elif color=='red':
-        qr.add_data('get_ipython().run_line_magic("s取消',%na)#", " 添加数据")
+        qr.add_data('get_ipython().run_line_magic("s取消'%name)#", " 添加数据")
     #qr.add_data('{:<10d}'.format('2021信通岗位新进员工技能强化班\n\r'))
     #qr.add_data(text1)
     #qr.add_data(text2)
     qr.make(fit=True)# 填充数据
     
    # 生成图片
-    img = qr.make_image(fill_color="green", back_color="white")
+    img = qr.make_image(fill_color=color, back_color="white")
     img = img.convert("RGBA")
     # 添加logo，打开logo照片
     icon = Image.open(r"jupyter_lab/二维码/国网.jpg").convert("RGBA")
@@ -78,11 +89,17 @@ def qr_code():
     plt.imshow(img)
     plt.show()
 
+def read_date():
+    f=open('date.csv')
+    lines=f.
 
 
 if __name__ == '__main__':
-    qr_code()
-    #name,origin_date,real_date
+    
+    name='2021信通岗位新进员工技能强化班'
+    origin_date='20210606'
+    real_date=None
+    qr_code(name,origin_date,real_date)
     #origin_date==real_date,green
     #origin_date<real_date,yellow
     #real_date is None
